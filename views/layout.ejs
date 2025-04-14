@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %> | Simple Express App</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Simple Express App</h1>
+            <nav>
+                <ul>
+                    <li class="<%= active === 'home' ? 'active' : '' %>"><a href="/">Home</a></li>
+                    <li class="<%= active === 'about' ? 'active' : '' %>"><a href="/about">About</a></li>
+                    <li class="<%= active === 'login' ? 'active' : '' %>"><a href="/login">Login</a></li>
+                    <li class="<%= active === 'register' ? 'active' : '' %>"><a href="/register">Register</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container">
+        <%- body %>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; <%= new Date().getFullYear() %> Simple Express App. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
